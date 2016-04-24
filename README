@@ -1,0 +1,42 @@
+Term::Mosh - Detect mosh
+
+SYNOPSIS
+
+  use Term::Mosh qw(mosh attached detached);
+  if(mosh) {
+      say "Using mosh, currently " . ( detached ? "not " : ) .  "attached";
+  }
+
+DESCRIPTION
+
+When running scripts under mosh, it's often useful to detect this and to
+detect whether mosh is currently attached or not. This module does exactly
+that and nothing more.
+
+EXPORTS
+
+mosh
+
+Returns whether we are running under mosh or not.
+
+attached
+
+Returns true when mosh is attached. Returns undef when we are not running
+under mosh.
+
+detached
+
+Returns true when mosh is detached. Returns undef when we are not running
+under mosh.
+
+SEE ALSO
+
+Manpages: mosh(1)
+
+AUTHOR
+
+Dennis Kaarsemaker E<lt>dennis@kaarsemaker.netE<gt>
+
+COPYRIGHT AND LICENSE
+
+This software is placed in the public domain, no rights reserved
